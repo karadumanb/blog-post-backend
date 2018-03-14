@@ -26,10 +26,11 @@ exports.createBlog = async function(req, res, next){
     }
 
     try{
-        var createdBlog = await BlogService.createdBlog(blog)
+        var createdBlog = await BlogService.createBlog(blog)
+        
         return res.status(201).json({status: 201, data: createdBlog, message: "Succesfully Created Blog"})
     }catch(e){
-        return res.status(400).json({status: 400, message: "Blog Creation was Unsuccesfull"})
+        return res.status(400).json({status: 400, message: "Blog Creation was Unsuccesfull" })
     }
 }
 
@@ -63,7 +64,7 @@ exports.removeBlog = async function(req, res, next){
     var id = req.params.id;
 
     try{
-        var deleted = await BlogService.removeBlog(id)
+        var deleted = await BlogService.deleteBlog(id)
         return res.status(204).json({status:204, message: "Succesfully Blog Deleted"})
     }catch(e){
         return res.status(400).json({status: 400, message: e.message})

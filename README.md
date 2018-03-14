@@ -4,7 +4,7 @@ A simple blog API made with NodeJS, ExpressJS and MongoDB. Can be used as a back
 
 ## Download Instruction
 
-Run `git clone https://github.com/nomanHasan/blog-api` to download the project to your computer.
+Run `git clone https://github.com/karadumanb/blog-api` to download the project to your computer.
 
 
 ## Database Setup
